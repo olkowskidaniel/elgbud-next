@@ -1,0 +1,47 @@
+.nav-bar {
+  margin-right: 50px;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul {
+  list-style: none;
+}
+
+.nav-bar ul li {
+  padding: 0 30px;
+}
+.nav-bar ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+.nav-bar ul li a::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+  margin-top: 1px;
+}
+
+.nav-bar ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-bar ul li a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}

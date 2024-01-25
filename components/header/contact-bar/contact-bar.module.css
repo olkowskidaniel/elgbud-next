@@ -1,0 +1,33 @@
+.contact-bar-container {
+  position: absolute;
+  width: 300px;
+  top: 0px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.contact-bar-container .contact-container {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+.contact-bar-container .contact-container svg {
+  color: var(--primary-color);
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.contact-bar-container .contact-container a {
+  color: black;
+  margin-right: 10px;
+  font-size: 13px;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+
+.contact-bar-container .contact-container a:hover {
+  color: var(--primary-color);
+}
