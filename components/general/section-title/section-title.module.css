@@ -1,0 +1,18 @@
+div.container {
+  margin-bottom: 20px;
+}
+
+div.container p {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+div.container span {
+  display: block;
+  height: 2px;
+  background-color: red;
+  margin-top: 5px;
+}

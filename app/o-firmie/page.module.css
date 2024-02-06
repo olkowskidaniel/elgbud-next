@@ -1,0 +1,9 @@
+main.about-page {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+div.container {
+  width: 90%;
+}

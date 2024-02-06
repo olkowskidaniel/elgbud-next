@@ -1,0 +1,11 @@
+div.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+div.container p.title {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}

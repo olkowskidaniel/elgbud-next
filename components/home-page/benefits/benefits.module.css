@@ -1,0 +1,13 @@
+.benefits {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 100px 0;
+  align-self: center;
+}
+
+.benefits .items-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}

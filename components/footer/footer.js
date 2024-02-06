@@ -12,11 +12,11 @@ import MapSketch from "@/components/footer/map-sketch/map-sketch";
 
 const Footer = () => {
   return (
-    <div className={css.footer}>
+    <footer className={css.footer}>
       <div className={css["footer-tiles-wrap"]}>
         <Image src={logoImg} alt="logo letter" />
         <div className={css["contacts-container"]}>
-          <p>FIRMA BUDOWLANO TRANSPORTOWA ELGBUD</p>
+          <p>FIRMA BUDOWLANO-TRANSPORTOWA ELGBUD</p>
           <p>Bartosz Marcinkowski</p>
           <div>
             <FaPhoneAlt />
@@ -47,7 +47,7 @@ const Footer = () => {
         wykonanie:{" "}
         <Link href="https://daniel-olkowski.pl">Daniel Olkowski</Link>
       </p>
-    </div>
+    </footer>
   );
 };
 

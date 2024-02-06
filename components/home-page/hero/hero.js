@@ -1,13 +1,13 @@
 import css from "./hero.module.css";
 import Image from "next/image";
 import { BiCheckCircle } from "react-icons/bi";
-import Button from "@/components/general/button/button";
+import PrimaryButton from "@/components/general/primary-button/primary-button";
 
 import house from "@/assets/house_ai_2.png";
 
 const Hero = () => {
   return (
-    <div className={css.hero}>
+    <section className={css.hero}>
       <Image src={house} fill={true} alt="AI generated house" />
       <div className={css.description}>
         <p>Kompleksowa budowa domów jednorodzinnych</p>
@@ -25,9 +25,9 @@ const Hero = () => {
             <p>Stan pod klucz</p>
           </div>
         </div>
-        <Button />
+        <PrimaryButton dest="/o-firmie">WIĘCEJ O NAS</PrimaryButton>
       </div>
-    </div>
+    </section>
   );
 };
 

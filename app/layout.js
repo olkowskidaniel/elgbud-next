@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Elgbud",
+  title: "ELGBUD",
   description: "Firma budowlano-transportowa",
 };
 
