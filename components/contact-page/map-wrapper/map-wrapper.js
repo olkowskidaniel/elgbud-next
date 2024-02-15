@@ -2,8 +2,6 @@
 
 import css from "./map-wrapper.module.css";
 
-import { useState, useCallback, memo } from "react";
-
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 const containerStyle = {
@@ -44,7 +42,7 @@ const MapWrapper = () => {
           >
             <Marker
               position={{ lat: 53.065363, lng: 18.921129 }}
-              animation={2}
+              animation={1}
             />
           </GoogleMap>
         ) : (
@@ -55,4 +53,4 @@ const MapWrapper = () => {
   );
 };
 
-export default memo(MapWrapper);
+export default MapWrapper;
