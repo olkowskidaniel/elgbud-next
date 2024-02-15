@@ -1,0 +1,45 @@
+div.container {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 2px rgba(95, 34, 34, 0.2);
+  /* background: radial-gradient(
+        circle at 100% 100%,
+        #ffffff 0,
+        #ffffff 3px,
+        transparent 3px
+      )
+      0% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px)
+      100% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px)
+      0% 100%/8px 8px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 3px, transparent 3px) 100%
+      100%/8px 8px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 10px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 16px)
+      calc(100% - 10px) no-repeat,
+    linear-gradient(
+      -24.8deg,
+      transparent 0 45%,
+      var(--primary-color) 0 55%,
+      transparent 0 100%
+    ); */
+}
+
+.container .title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.container .content-container {
+  width: 100%;
+  margin-top: 30px;
+  flex-grow: 1;
+}

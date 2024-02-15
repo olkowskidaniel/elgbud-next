@@ -1,7 +1,8 @@
 import css from "./page.module.css";
 
 import SectionTitle from "@/components/general/section-title/section-title";
-import InfoCard from "@/components/contact-page/info-card/info-card";
+import InfoCards from "@/components/contact-page/info-cards/info-cards";
+import MapWrapper from "@/components/contact-page/map-wrapper/map-wrapper";
 
 export default function ContactPage() {
   return (
@@ -10,20 +11,8 @@ export default function ContactPage() {
         <SectionTitle lineWidth={`150px`}>
           Pozwól nam wybudować Twój wymarzony dom
         </SectionTitle>
-        <div className={css["cards-container"]}>
-          <InfoCard title={"adres"}>
-            <p>
-              Elgiszewo 143 87-408 Ciechocin <br />
-              pow. golubsko-dobrzyński
-            </p>
-          </InfoCard>
-          <InfoCard title={"Kontakt"}>
-            <p>Zrobić partial border na cardsach</p>
-          </InfoCard>
-          <InfoCard title={"Dane firmy"}>
-            <p>Poniżej mapa a jeszcze poniżej formularz kontaktowy</p>
-          </InfoCard>
-        </div>
+        <InfoCards />
+        <MapWrapper />
       </div>
     </main>
   );

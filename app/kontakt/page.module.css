@@ -9,12 +9,3 @@ div.container {
   display: flex;
   flex-direction: column;
 }
-
-div.container div.cards-container {
-  margin: 50px 0;
-  display: flex;
-  flex-shrink: 1;
-  flex-grow: 0;
-  justify-content: center;
-  gap: 50px;
-}

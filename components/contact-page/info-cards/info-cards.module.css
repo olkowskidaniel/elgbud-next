@@ -1,0 +1,61 @@
+div.container {
+  width: 80%;
+  margin: 50px 0;
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 0;
+  justify-content: center;
+  gap: 40px;
+  align-self: center;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+
+.container .address-card {
+  text-align: center;
+  line-height: 35px;
+}
+
+.container .contact-card {
+  line-height: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .contact-item {
+  width: 80%;
+  text-align: left;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.container .contact-item svg {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.container .contact-item a {
+  color: black;
+  transition: 0.3s;
+}
+
+.container .contact-item a:hover {
+  color: var(--primary-color);
+}
+
+.container .info-card {
+  line-height: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .info-card .info-item {
+  width: 80%;
+  text-align: left;
+  display: flex;
+  gap: 20px;
+}
