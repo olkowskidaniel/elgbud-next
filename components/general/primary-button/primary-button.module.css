@@ -9,6 +9,10 @@
   color: var(--primary-color);
   letter-spacing: 2px;
   transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .button_text {
   display: flex;

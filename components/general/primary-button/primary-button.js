@@ -1,9 +1,18 @@
-import css from "./primary-button.module.css";
-import Link from "next/link";
+"use client";
 
-const PrimaryButton = ({ children, dest, fontColor }) => {
+import css from "./primary-button.module.css";
+import { useRouter } from "next/navigation";
+
+const PrimaryButton = ({ children, fontColor, navigate }) => {
+  const router = useRouter();
+  const handleClick = () => {
+    if (navigate) {
+      router.push(navigate);
+    }
+  };
+
   return (
-    <Link href={dest} className={css.button}>
+    <button className={css.button} onClick={handleClick}>
       <div className={css["button_line"]}></div>
       <div className={css["button_line"]}></div>
       <span
@@ -12,7 +21,7 @@ const PrimaryButton = ({ children, dest, fontColor }) => {
       >
         {children}
       </span>
-    </Link>
+    </button>
   );
 };
 

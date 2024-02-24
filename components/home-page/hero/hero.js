@@ -1,3 +1,5 @@
+"use client";
+
 import css from "./hero.module.css";
 import Image from "next/image";
 import { BiCheckCircle } from "react-icons/bi";
@@ -25,7 +27,7 @@ const Hero = () => {
             <p>Stan pod klucz</p>
           </div>
         </div>
-        <PrimaryButton dest="/o-firmie">WIĘCEJ O NAS</PrimaryButton>
+        <PrimaryButton navigate="/o-firmie">WIĘCEJ O NAS</PrimaryButton>
       </div>
     </section>
   );
