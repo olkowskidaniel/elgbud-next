@@ -8,7 +8,6 @@ const SideNav = () => {
   return (
     <div className={css.container}>
       <Image src={logo} width={250} unoptimized />
-      <Link href="/dashboard/login">Zaloguj się</Link>
     </div>
   );
 };

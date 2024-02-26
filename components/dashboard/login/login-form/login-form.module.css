@@ -48,4 +48,9 @@
   padding: 10px 20px;
   border-radius: 5px;
   color: white;
+  transition: 0.5s;
+}
+
+.container form .submit:hover {
+  background-color: #000000;
 }

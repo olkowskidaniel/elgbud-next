@@ -8,10 +8,16 @@
     "start": "next start -p 9002",
     "lint": "next lint"
   },
+  "browser": {
+    "child_process": false
+  },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.2",
     "@react-google-maps/api": "^2.19.3",
-    "next": "^14.1.1-canary.27",
+    "jose": "^5.2.2",
+    "mongodb": "^6.3.0",
+    "next": "^14.1.0",
+    "next-auth": "^4.24.6",
     "nodemailer": "^6.9.9",
     "react": "^18",
     "react-dom": "^18",
@@ -19,6 +25,7 @@
     "react-icons": "^5.0.1"
   },
   "devDependencies": {
+    "@types/node": "^20.11.20",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",

@@ -1,6 +1,6 @@
 "use client";
 
-import { sendMail } from "@/utils/send-mail/send-mail";
+import { sendMail } from "@/lib/send-mail";
 import css from "./contact-form.module.css";
 
 import InputForm from "./input-form/input-form";
