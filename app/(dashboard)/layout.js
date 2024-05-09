@@ -1,6 +1,7 @@
 import SideNav from "@/components/dashboard/sidenav/sidenav";
 import css from "./layout.module.css";
 import "./globals.css";
+import AuthProvider from "@/components/dashboard/login/AuthProvider";
 
 export const metadata = {
   title: "Elgbud | Dashboard",
@@ -19,8 +20,10 @@ export default function RootLayout({ children }) {
     <html lang="pl" className={inter.className}>
       <body>
         <div className={css.container}>
-          <SideNav />
-          {children}
+          <AuthProvider>
+            <SideNav />
+            {children}
+          </AuthProvider>
         </div>
       </body>
     </html>

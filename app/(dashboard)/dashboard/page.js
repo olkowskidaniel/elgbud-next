@@ -1,16 +1,27 @@
-import LoginForm from "@/components/dashboard/login/login-form/login-form";
+"use client";
 import css from "./page.module.css";
-import { connectToDatabase } from "@/lib/db";
+
+import { useSession } from "next-auth/react";
 
 const Page = () => {
-  const handleClick = async () => {
-    const client = connectToDatabase();
-  };
-
-  handleClick();
+  const { data: session, status } = useSession();
   return (
     <div className={css.container}>
-      <LoginForm />
+      {status === "authenticated" ? (
+        session.user?.verified ? (
+          <p>Tu pojawi się treść </p>
+        ) : (
+          <>
+            <h1>Dzień dobry {session.user?.name}</h1>
+            <p>
+              Twoje konto nie jest zweryfikowane. Skontaktuj się z
+              administratorem.
+            </p>
+          </>
+        )
+      ) : (
+        <h1>Zaloguj się, aby uzyskać dostęp do panelu</h1>
+      )}
     </div>
   );
 };
