@@ -1,0 +1,15 @@
+.container {
+  display: block;
+  background-color: var(--primary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  transition: 0.3s;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.container:hover {
+  background-color: #000000;
+}

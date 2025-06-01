@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 50px;
+}
+
+.container form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px 4%;
+  flex-direction: column;
+}
+
+.container form .inputs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px 4%;
+}
+
+.container form .inputs-container .input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 22%;
+}
+
+.container form label {
+  font-size: 15px;
+}
+
+.container form input {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 5px;
+  border: 1px solid rgb(159, 158, 158, 0.5);
+  padding: 0 10px;
+  background-color: rgb(226, 225, 225, 0.2);
+}
+
+.container form .description-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.container form button {
+  width: 200px;
+}
+
+.container form .upload-photo-container {
+}

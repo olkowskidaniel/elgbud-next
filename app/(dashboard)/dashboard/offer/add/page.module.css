@@ -1,0 +1,9 @@
+.container {
+  width: calc(100vw - 300px);
+  display: flex;
+  padding-top: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}

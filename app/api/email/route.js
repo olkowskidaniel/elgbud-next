@@ -19,10 +19,10 @@ export async function POST(request) {
     await transport.sendMail({
       from: process.env.MY_EMAIL,
       to: "olkowski.daniel@gmail.com",
-      subject: `Message from ${name} (${email})`,
-      text: `${message}. Numer telefonu: ${phone}`,
+      subject: `Wiadomość od ${name} (${email})`,
+      Treść: `${message}. Numer telefonu: ${phone}`,
     });
-    return NextResponse.json({ message: "Email sent" });
+    return NextResponse.json({ message: "Wiadomość przesłana pomyślnie" });
   } catch (err) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }

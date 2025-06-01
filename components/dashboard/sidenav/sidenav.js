@@ -8,24 +8,47 @@ import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
 
 import DashButton from "../dash-button/dash-button";
+import DashLink from "../dash-link/dash-link";
 
 const SideNav = () => {
   const pathname = usePathname();
   const { data: session, status } = useSession();
-  console.log(session);
 
   return (
     <div className={css.container}>
       <Link href="/dashboard">
         <Image src={logo} width={250} unoptimized alt="Logo" priority />
       </Link>
-      <div className={css["nav-links"]}>
-        {pathname === "/dashboard" && status !== "authenticated" && (
-          <Link className={css.link} href="/dashboard/login">
-            Zaloguj się
-          </Link>
-        )}
-        {pathname === "/dashboard" && status === "authenticated" && (
+
+      {status !== "authenticated" && pathname !== "/dashboard/login" && (
+        <div className={css["nav-links"]}>
+          <DashLink href="/dashboard/login">Zaloguj się</DashLink>
+        </div>
+      )}
+
+      {status !== "authenticated" && pathname === "/dashboard/login" && (
+        <div className={css["nav-links"]}>
+          <DashLink href="/dashboard">Powrót do strony głównej</DashLink>
+        </div>
+      )}
+
+      {status === "authenticated" && session.user?.verified && (
+        <div className={css["nav-links"]}>
+          <DashLink href="/dashboard/offer">OFERTA</DashLink>
+          <DashLink href="/dashboard/realizations">REALIZACJE</DashLink>
+          <DashLink href="/dashboard/profile">PROFIL UŻYTKOWNIKA</DashLink>
+          <DashButton
+            onClick={() => {
+              signOut();
+            }}
+          >
+            WYLOGUJ SIĘ
+          </DashButton>
+        </div>
+      )}
+
+      {status === "authenticated" && !session.user?.verified && (
+        <div className={css["nav-links"]}>
           <DashButton
             onClick={() => {
               signOut();
@@ -33,13 +56,8 @@ const SideNav = () => {
           >
             Wyloguj się
           </DashButton>
-        )}
-        {pathname === "/dashboard/login" && (
-          <Link className={css.link} href="/dashboard">
-            Powrót do strony głównej
-          </Link>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
